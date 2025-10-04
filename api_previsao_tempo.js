@@ -92,7 +92,7 @@ app.get('/previsao', async (req, res) => {
 
     const descricao = describeWeather(currentWeather, daily);
 
-    res.json({
+    return res.json({
       cidade,
       estado: cidadeInfo.admin1,
       temperatura_atual: currentWeather.temperature,
