@@ -14,7 +14,7 @@ async function menuLoop() {
       const estado = await rl.question("Digite a sigla do estado (ex: SC, SP): ");
       try {
         const response = await axios.get('http://localhost:5000/previsao', {
-          params: { cidade, estado }
+          params: { cidade: cidade, estado: estado }
         });
   
         const dados = response.data;
